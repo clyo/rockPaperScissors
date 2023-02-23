@@ -1,68 +1,17 @@
 <!DOCTYPE html>
-    <script>
-        function getComputerChoice(){
-            const choices = ["rock","paper","scissors"];
-            let random = choices[Math.floor(Math.random()*choices.length)];
-            return random;
-        }
-
-        function playerSelection(){
-            let insert = prompt("Select Rock, Paper or Scissor");
-            return insert;
-        }
-
-        let playerScore = 0;
-        let compScore =0
-
-
-        function playRound(computerChoice, playerChoice){
-
-            if (computerChoice == playerChoice){
-                alert("It's a tie");
-                return 0;
-            } else if (computerChoice == "rock" & playerChoice == "paper"){
-                alert("You win!");
-                return playerScore++;
-            } else if (computerChoice == "rock" & playerChoice != "paper"){
-                alert("You lose!");
-                return compScore++;
-            } else if (computerChoice == "paper" & playerChoice == "rock"){
-                alert("You win!");
-                return playerScore++;
-            } else if (computerChoice == "paper" & playerChoice != "rock"){
-                alert("You lose!");
-                return compScore++;
-            } else if (computerChoice == "scissors" & playerChoice == "rock"){
-                alert("You win!");
-                return playerScore++;
-            } else if (computerChoice == "scissors" & playerChoice != "rock"){
-                alert("You lose!");
-                return compScore++;
-            }
-        } 
-
-        function game() {
-
-            for (let i = 0; i <5; i++) {
-                let computerChoice = getComputerChoice();
-                let playerChoice = playerSelection();
-                playRound(computerChoice, playerChoice);
-                console.log(computerChoice);
-                console.log(compScore);
-                console.log(playerChoice);
-                console.log(playerScore);
-            }
-            if (playerScore > compScore){
-                alert("Congratulation you beat the computer!!! Your score is " + playerScore + " and the computer's score is " + compScore);
-            } else if (playerScore < compScore){
-                alert("Too bad, you lost!!! Your score is " + playerScore + " and the computer's score is " + compScore);
-            } else if (playerScore = compScore){
-                alert("It's a tie!!! Your score is " + playerScore + " and the computer's score is " + compScore);
-            } 
-
-        }
-
-        game();
-
-    </script>
+ <title>ROCK PAPER SCISSORS</title> 
+<head>
+    <h1>ROCK PAPER SCISSORS</h1>
+</head>
+<body>
+    <div class="buttons">
+        <button id="btn">Rock</button>
+        <button id="btn">Paper</button>
+        <button id="btn">Scissors</button>
+    </div>
+    <br>
+    <div class="results">resultssss</div>
+    <script src="rps.js" defer></script>
+</body>
+    
 </html>
